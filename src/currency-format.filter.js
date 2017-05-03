@@ -59,7 +59,7 @@ angular.module('currencyFormat', ['currencyFormat.iso'])
                 rtl = !!currency.uniqSymbol.rtl;
             }
             else {
-                formattedCurrency = signAmount + '<span class="amount">'+formatedAmount+'</span> <span class="currency">' + currencyCode + '</span>';
+                formattedCurrency = '<span class="amount">' + signAmount + formatedAmount+'</span> <span class="currency">' + currencyCode + '</span>';
             }
 
             return $sce.trustAsHtml('<span dir="' + (rtl ? 'rtl' : 'ltr') + '">' + formattedCurrency + '</span>');
